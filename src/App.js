@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
-import { BrowserRouter } from 'react-router-dom';
+import { BrowserRouter, Switch, Route } from 'react-router-dom';
 import Navbar from './components/layout/Navbar';
+import Dashboard from './components/dashboard/Dashboard';
 
 export default class App extends Component {
   render() {
@@ -8,7 +9,10 @@ export default class App extends Component {
       <BrowserRouter>
         <Navbar />
         <div className='App'>
-          <h1>Header</h1>
+          {/* Switch makes sure only one route is loaded up at a time */}
+          <Switch>
+            <Route path='/' component={Dashboard} />
+          </Switch>
         </div>
       </BrowserRouter>
     );
