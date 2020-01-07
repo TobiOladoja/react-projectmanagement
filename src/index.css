@@ -22,3 +22,13 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+form {
+  padding: 20px; /* Give it more room in the edges */
+  margin-top: 60px; /* Push it down from the nav-bar */
+}
+
+form button,
+form h5 {
+  margin: 20px 0;
+}
