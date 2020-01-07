@@ -1,12 +1,24 @@
 import React, { Component } from 'react';
 
 export class SignIn extends Component {
-  state = {};
+  state = {
+    email: '',
+    password: ''
+  };
   handleChange = e => {
-    console.log(e);
+    //   Update property - target id, so if it targets email then email will update,
+    //   if password then password will be updated. Whichever input the user types into
+    // will update. and use e.target.value so we can update the state with the value with
+    //   whatever the target element is being changed with.
+    this.setState({
+      [e.target.id]: e.target.value
+    });
   };
   handleSubmit = e => {
-    console.log(e);
+    //   prevent default action of form being submitted and page being refreshed when pressed enter.container
+    // console log logs in whats been done in handleChange as it updates state.
+    e.preventDefault();
+    console.log(this.state);
   };
   render() {
     return (
